@@ -4,7 +4,7 @@ router.get("/", async(ctx, next) => {
     hello: "world"
   };
   next();
-}).post("/", (ctx, next) => {
+}).post("/", async(ctx, next) => {
   ctx.body={
     index: "index"
   }
