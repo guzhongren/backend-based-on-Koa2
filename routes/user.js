@@ -3,7 +3,6 @@ var User = require("../model/user");
 router.get("/", async(ctx, next) => {
   try {
     let result = await User.getUser();
-    console.log(result,'router');
     ctx.body = result;
   }catch(err) {
     console.log('catch', err)
