@@ -2,9 +2,10 @@
 var config = require("../config/apiConfig");
 var pg = require("pg");
 
-let pool = pg.Pool(config.dataBase)
+// let pool = pg.Pool(config.dataBase)
 exports.getUser = () => {
   return new Promise((resolve, reject) => {
+    let pool = pg.Pool(config.dataBase)
     pool.on('connect', () => {
       console.log("connect error!");
     });
