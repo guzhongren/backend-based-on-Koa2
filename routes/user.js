@@ -1,6 +1,6 @@
-var router = require("koa-router")();
-var User = require("../model/user");
-router.get("/", async(ctx, next) => {
+var router = require('koa-router')();
+var User = require('../model/user');
+router.get('/', async(ctx, next) => {
   try {
     let result = await User.getUser();
     ctx.body = result;

@@ -1,12 +1,13 @@
-var router = require("koa-router")();
-router.get("/", async(ctx, next) => {
+var router = require('koa-router')();
+router.get('/', async(ctx, next) => {
+  console.log('coming');
   ctx.body = {
-    hello: "world"
+    hello: 'world'
   };
   next();
-}).post("/", async(ctx, next) => {
+}).post('/', async(ctx, next) => {
   ctx.body={
-    index: "index"
+    index: 'index'
   }
 });
 module.exports = router;

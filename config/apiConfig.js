@@ -1,13 +1,13 @@
 let config = {
   api: {
-    apiPrefix: "/api",
+    apiPrefix: '/api',
     apiPort: 3000
   },
   dataBase: {
-    host: "127.0.0.1",
-    user: "postgres",
-    database: "DataBase",
-    password: "123456Aa?",
+    host: '127.0.0.1',
+    user: 'postgres',
+    database: 'DataBase',
+    password: '123456Aa?',
     port: 5432,
     // 扩展属性
     max:20, // 连接池最大连接数

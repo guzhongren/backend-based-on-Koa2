@@ -1,9 +1,9 @@
 {
-  "name": "koaTest",
+  "name": "koatest",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "./node_modules/.bin/nodemon app.js",
     "test": "mocha"
   },
   "dependencies": {
