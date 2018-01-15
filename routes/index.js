@@ -1,3 +1,4 @@
+'use strict';
 var router = require('koa-router')();
 router.get('/', async(ctx, next) => {
   console.log('coming');

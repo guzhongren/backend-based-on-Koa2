@@ -6,8 +6,8 @@ let config = {
   dataBase: {
     host: '127.0.0.1',
     user: 'postgres',
-    database: 'DataBase',
-    password: '123456Aa?',
+    database: 'geocon',
+    password: '000000',
     port: 5432,
     // 扩展属性
     max:20, // 连接池最大连接数
