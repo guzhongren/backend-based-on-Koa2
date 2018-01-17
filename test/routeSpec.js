@@ -5,26 +5,42 @@ const app = require('../app');
 const request = superagent(app.listen());
 
 describe('Routes', () => {
-  describe('GET /', () => {
-    it('should return 200', done => {
+  before(done => {
+    console.log('test beging....');
+    done();
+  });
+  after(done => {
+    console.log('test finished ....');
+    done();
+  });
+  beforeEach(done => {
+    console.log('test beging again....');
+    done();
+  });
+
+  afterEach(done => {
+    console.log('test finished again....');
+    done();
+  });
+
+  describe('GET /api/', () => {
+    it('api index should return json', function () {
       request
-        .get('/')
-        .expect(200, done);
+        .get('/api/')
+        .expect(res => {
+          res.body.hello = 'world';
+        });
     });
   });
-  describe('GET /messages', () => {
-    it('should return 200', done => {
+
+  describe('GET /api/user/', () => {
+    it('#user interface test', done => {
       request
-        .get('/messages')
-        .expect('Content-Type', /json/)
-        .expect(200, done);
-    });
-  });
-  describe('GET /messages/notfound', () => {
-    it('should return 404', done => {
-      request
-        .get('/messages/notfound')
-        .expect(404, done);
+        .get('/api/user/')
+        .expect((res) => {
+          res.body.status = 'success';
+        });
+      done();
     });
   });
 });
