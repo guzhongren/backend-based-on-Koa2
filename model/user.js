@@ -1,30 +1,30 @@
-'use strict';
-var config = require('../config/apiConfig');
-var pg = require('pg');
+'use strict'
+var config = require('../config/apiConfig')
+var pg = require('pg')
 
 /**
  * 获取所有用户
  */
 exports.getUser = () => {
   return new Promise((resolve, reject) => {
-    let pool = pg.Pool(config.dataBase);
+    let pool = pg.Pool(config.dataBase)
     pool.on('error', (err) => {
-      console.error('Unexpected error on edle client', err);
-    });
+      console.error('Unexpected error on edle client', err)
+    })
     pool.connect().then((client) => {
       client.query(`SELECT * FROM public."分类公路长度"`).then((sqlResult) => {
-        let res = {};
+        let res = {}
         if (sqlResult.rowCount >= 0) {
-          res.status = 'success';
-          res.data = sqlResult.rows;
+          res.status = 'success'
+          res.data = sqlResult.rows
         }
-        resolve(res);
+        resolve(res)
       }, (err) => {
-        console.log('数据库中查询出错', err);
-      });
+        console.log('数据库中查询出错', err)
+      })
     }, (err) => {
-      console.log('查询出错', err);
-      reject(err);
-    });
-  });
-};
+      console.log('查询出错', err)
+      reject(err)
+    })
+  })
+}

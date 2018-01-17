@@ -1,14 +1,14 @@
-'use strict';
-var router = require('koa-router')();
+'use strict'
+var router = require('koa-router')()
 router.get('/', async(ctx, next) => {
-  console.log('coming');
+  console.log('coming')
   ctx.body = {
     hello: 'world'
-  };
-  next();
+  }
+  next()
 }).post('/', async(ctx, next) => {
-  ctx.body={
+  ctx.body = {
     index: 'index'
   }
-});
-module.exports = router;
+})
+module.exports = router

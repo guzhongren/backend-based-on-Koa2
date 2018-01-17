@@ -1,10 +1,10 @@
-var router = require('koa-router')();
-var User = require('../model/user');
+var router = require('koa-router')()
+var User = require('../model/user')
 router.get('/', async(ctx, next) => {
   try {
-    let result = await User.getUser();
-    ctx.body = result;
-  }catch(err) {
+    let result = await User.getUser()
+    ctx.body = result
+  } catch (err) {
     console.log('catch', err)
   }
 }).post('/', (ctx, next) => {
@@ -15,4 +15,4 @@ router.get('/', async(ctx, next) => {
 }).put('/:id', (ctx, next) => {
   ctx.body = ctx.request
 })
-module.exports = router;
+module.exports = router
