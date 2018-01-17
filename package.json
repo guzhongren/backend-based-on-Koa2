@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "./node_modules/.bin/nodemon app.js",
-    "test": "./node_modules/.bin/mocha -w"
+    "test": "./node_modules/.bin/mocha -w",
+    "cover": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha" 
   },
   "dependencies": {
     "co-body": "^4.0.0",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "istanbul": "^0.4.5",
     "mocha": "^2.4.5",
     "supertest": "^0.12.1"
   },
