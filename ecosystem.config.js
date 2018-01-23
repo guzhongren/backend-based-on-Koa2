@@ -30,11 +30,11 @@ module.exports = {
    */
   deploy : {
     production : {
-      user : 'c4',
-      host : '47.95.247.139',
+      user : 'c4', //也可以useradd另建用户
+      host : '47.95.247.139',  // 服务器地址
       ref  : 'origin/master',
-      repo : 'git@github.com:guzhongren/backend-based-on-Koa2.git',
-      path : '/home/c4/depoly',
+      repo : 'git@github.com:guzhongren/backend-based-on-Koa2.git', // github上的项目地址
+      path : '/home/c4/depoly', //  服务器上放项目的目录
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     },
     dev : {
