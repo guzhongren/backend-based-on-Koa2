@@ -6,7 +6,9 @@
     "start": "./node_modules/.bin/nodemon app.js",
     "test": "./node_modules/.bin/mocha -w",
     "cover": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
-    "standard": "./node_modules/.bin/standard --fix"
+    "standard": "./node_modules/.bin/standard --fix",
+    "deploySetup": "pm2 deploy ecosystem.config.js production setup",
+    "depoly": "pm2 deploy ecosystem.config.js production"
   },
   "dependencies": {
     "co-body": "^4.0.0",
@@ -27,9 +29,7 @@
     "istanbul": "^0.4.5",
     "mocha": "^2.4.5",
     "standard": "^10.0.3",
-    "supertest": "^0.12.1",
-    "deploySetup": "pm2 deploy ecosystem.config.js production setup",
-    "depoly": "pm2 deploy ecosystem.config.js production"
+    "supertest": "^0.12.1"
   },
   "nodemonConfig": {
     "ignore": [
