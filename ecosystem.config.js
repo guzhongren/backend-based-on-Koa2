@@ -3,24 +3,24 @@ module.exports = {
    * Application configuration section
    * http://pm2.keymetrics.io/docs/usage/application-declaration/
    */
-  apps : [
+  apps: [
 
     // First application
     {
-      name      : 'koatest',
-      script    : 'app.js',
+      name: 'koatest',
+      script: 'app.js',
       env: {
         COMMON_VARIABLE: 'true'
       },
-      env_production : {
+      env_production: {
         NODE_ENV: 'production'
       }
     },
 
     // Second application
     {
-      name      : 'WEB',
-      script    : 'web.js'
+      name: 'WEB',
+      script: 'web.js'
     }
   ],
 
@@ -28,23 +28,23 @@ module.exports = {
    * Deployment section
    * http://pm2.keymetrics.io/docs/usage/deployment/
    */
-  deploy : {
-    production : {
-      user : 'c4',                                                             //也可以useradd另建用户
-      host : '47.95.247.139',                                                  // 服务器地址
-      ref  : 'origin/master',
-      repo : 'git@github.com:guzhongren/backend-based-on-Koa2.git',            // github上的项目地址
-      path : '/home/c4/depoly',                                                //  服务器上放项目的目录
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
+  deploy: {
+    production: {
+      user: 'c4', //也可以useradd另建用户
+      host: '47.95.247.139', // 服务器地址
+      ref: 'origin/master',
+      repo: 'git@github.com:guzhongren/backend-based-on-Koa2.git', // github上的项目地址
+      path: '/home/c4/depoly', //  服务器上放项目的目录
+      'post-deploy': 'yarn install && pm2 reload ecosystem.config.js --env production'
     },
-    dev : {
-      user : 'c4',
-      host : '47.95.247.139',
-      ref  : 'origin/master',
-      repo : 'git@github.com:guzhongren/backend-based-on-Koa2.git',
-      path : '/home/c4/depoly',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env dev',
-      env  : {
+    dev: {
+      user: 'c4',
+      host: '47.95.247.139',
+      ref: 'origin/master',
+      repo: 'git@github.com:guzhongren/backend-based-on-Koa2.git',
+      path: '/home/c4/depoly',
+      'post-deploy': 'yarn install && pm2 reload ecosystem.config.js --env dev',
+      env: {
         NODE_ENV: 'dev'
       }
     }

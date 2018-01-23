@@ -27,7 +27,9 @@
     "istanbul": "^0.4.5",
     "mocha": "^2.4.5",
     "standard": "^10.0.3",
-    "supertest": "^0.12.1"
+    "supertest": "^0.12.1",
+    "deploySetup": "pm2 deploy ecosystem.config.js production setup",
+    "depoly": "pm2 deploy ecosystem.config.js production"
   },
   "nodemonConfig": {
     "ignore": [
