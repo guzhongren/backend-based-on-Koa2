@@ -37,3 +37,23 @@ yarn run cover
 ```
 
 ![cover](./img/cover.png)
+
+## 部署
+
+pm2部署前设置
+
+```shell
+yarn run depolySetup
+```
+
+部署
+
+```shell
+yarn run depoly
+```
+
+## 访问
+
+```shell
+curl http://47.95.247.139/api/
+```
