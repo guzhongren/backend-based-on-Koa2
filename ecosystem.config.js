@@ -30,12 +30,12 @@ module.exports = {
    */
   deploy: {
     production: {
-      user: 'c4', //也可以useradd另建用户
-      host: '47.95.247.139', // 服务器地址
+      user: 'c4',                                                 //也可以useradd另建用户
+      host: '47.95.247.139',                                      //服务器地址
       ref: 'origin/master',
-      repo: 'git@github.com:guzhongren/backend-based-on-Koa2.git', // github上的项目地址
-      path: '/home/c4/depoly', //  服务器上放项目的目录
-      'post-deploy': 'yarn install && pm2 reload ecosystem.config.js --env production'
+      repo: 'git@github.com:ghongren/backend-based-on-Koa2.git',  // github上的项目地址
+      path: '/home/c4/depoly',                                     //  服务器上放项目的目录
+      'post-deploy': 'yarn install && ./node_modules/.bin/pm2 reload ecosystem.config.js --env production'
     },
     dev: {
       user: 'c4',
@@ -43,7 +43,7 @@ module.exports = {
       ref: 'origin/master',
       repo: 'git@github.com:guzhongren/backend-based-on-Koa2.git',
       path: '/home/c4/depoly',
-      'post-deploy': 'yarn install && pm2 reload ecosystem.config.js --env dev',
+      'post-deploy': 'yarn install && ./node_modules/.bin/pm2 reload ecosystem.config.js --env dev',
       env: {
         NODE_ENV: 'dev'
       }
