@@ -28,7 +28,7 @@ module.exports = {
       host: '47.95.247.139',                                      //服务器地址
       ref: 'origin/master',
       repo: 'git@github.com:ghongren/backend-based-on-Koa2.git',  // github上的项目地址
-      path: '/home/c4/depoly',                                     //  服务器上放项目的目录
+      path: '/home/c4/depoly/koaPostgresql',                                     //  服务器上放项目的目录
       'post-deploy': 'yarn install && ./node_modules/.bin/pm2 reload ecosystem.config.js --env production'
     },
     dev: {
@@ -36,7 +36,7 @@ module.exports = {
       host: '47.95.247.139',
       ref: 'origin/master',
       repo: 'git@github.com:guzhongren/backend-based-on-Koa2.git',
-      path: '/home/c4/depoly',
+      path: '/home/c4/depoly/koaPostgresql',
       'post-deploy': 'yarn install && ./node_modules/.bin/pm2 reload ecosystem.config.js --env dev',
       env: {
         NODE_ENV: 'dev'
