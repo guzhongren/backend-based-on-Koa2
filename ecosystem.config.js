@@ -27,7 +27,7 @@ module.exports = {
       user: 'c4',                                                 //也可以useradd另建用户
       host: '47.95.247.139',                                      //服务器地址
       ref: 'origin/master',
-      repo: 'git@github.com:guhongren/backend-based-on-Koa2.git',  // github上的项目地址
+      repo: 'git@github.com:guzhongren/backend-based-on-Koa2.git',  // github上的项目地址
       path: '/home/c4/depoly/koaPostgresql',                                     //  服务器上放项目的目录
       'post-deploy': 'yarn install && ./node_modules/.bin/pm2 reload ecosystem.config.js --env production'
     },
