@@ -3,6 +3,7 @@ var config = require('./config/apiConfig')
 var IndexRouter = require('./routes')
 var UserRouter = require('./routes/user')
 const compress = require('koa-compress')
+const cors = require('@koa/cors')
 const logger = require('koa-logger')
 const serve = require('koa-static')
 const router = require('koa-router')({
@@ -13,6 +14,8 @@ const path = require('path')
 const app = module.exports = new Koa()
 // Logger
 app.use(logger())
+// 跨域设置
+app.use(cors())
 
 router.use('/', IndexRouter.routes())
 router.use('/user', UserRouter.routes())

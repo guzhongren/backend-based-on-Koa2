@@ -11,6 +11,7 @@
     "depoly": "./node_modules/.bin/pm2 deploy ecosystem.config.js production"
   },
   "dependencies": {
+    "@koa/cors": "^2.2.1",
     "co-body": "^4.0.0",
     "co-views": "^2.1.0",
     "global": "^4.3.2",
