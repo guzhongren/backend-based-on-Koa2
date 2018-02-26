@@ -1,5 +1,5 @@
 {
-  "name": "koatest",
+  "name": "koa_test",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,8 +7,8 @@
     "test": "./node_modules/.bin/mocha -w",
     "cover": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
     "standard": "./node_modules/.bin/standard --fix",
-    "depolySetup": "./node_modules/.bin/pm2 deploy ecosystem.config.js production setup",
-    "depoly": "./node_modules/.bin/pm2 deploy ecosystem.config.js production"
+    "deploySetup": "./node_modules/.bin/pm2 deploy ecosystem.config.js production setup",
+    "deploy": "./node_modules/.bin/pm2 deploy ecosystem.config.js production"
   },
   "dependencies": {
     "@koa/cors": "^2.2.1",

@@ -43,13 +43,13 @@ yarn run cover
 pm2部署前设置
 
 ```shell
-yarn run depolySetup
+yarn run deploySetup
 ```
 
 部署
 
 ```shell
-yarn run depoly
+yarn run deploy
 ```
 
 ## 访问
