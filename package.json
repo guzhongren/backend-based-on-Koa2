@@ -11,12 +11,16 @@
     "deploy": "./node_modules/.bin/pm2 deploy ecosystem.config.js production"
   },
   "dependencies": {
-    "@koa/cors": "^2.2.1",
+    "bcrypt": "^1.0.3",
     "co-body": "^4.0.0",
     "co-views": "^2.1.0",
     "global": "^4.3.2",
+    "jsonwebtoken": "^8.1.1",
     "koa": "next",
     "koa-compress": "^1.0.6",
+    "koa-cors": "^0.0.16",
+    "koa-helmet": "^3.3.0",
+    "koa-jwt": "^3.3.0",
     "koa-logger": "^1.2.0",
     "koa-route": "^2.4.2",
     "koa-router": "^7.2.1",
