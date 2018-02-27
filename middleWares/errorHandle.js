@@ -1,14 +1,9 @@
-export default (ctx, next) => {
+export default async (ctx, next) => {
   console.log(ctx)
-  return next().catch((err) => {
-    console.log('errrr', err)
-    if (err.status === 404) {
-      ctx.status = 404
-      ctx.body = {
-        error: err.originalError ? err.originalError.message : err.message
-      }
-    } else {
-      throw err
-    }
-  })
+  try {
+    await next() // next is now a function
+  } catch (err) {
+    ctx.body = { message: err.message }
+    ctx.status = err.status || 500
+  }
 }

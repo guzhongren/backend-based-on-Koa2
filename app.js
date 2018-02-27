@@ -19,22 +19,22 @@ const router = Router({
 const app = new Koa()
 
 app.use(ErrorHandle)
-.use(logger())
-.use(bodyParser())
-.use(helmet())
-.use(cors())
+  .use(logger())
+  .use(bodyParser())
+  .use(helmet())
+  .use(cors())
 
 router.use('', IndexRouter.routes())
   .use('/user', UserRouter.routes())
 app.use(router.routes())
 
 // Serve static files
-.use(serve(path.join(__dirname, 'public')))
+  .use(serve(path.join(__dirname, 'public')))
 
 // Compress
-.use(compress())
+  .use(compress())
 
-.listen(config.api.apiPort)
+  .listen(config.api.apiPort)
 console.log(`listening on port ${config.api.apiPort}`)
 
 module.exports = app

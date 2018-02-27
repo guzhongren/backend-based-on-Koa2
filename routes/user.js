@@ -2,7 +2,7 @@ import Router from 'koa-router'
 // import User from '../model/user'
 const router = Router()
 
-router.get('/', async(ctx, next) => {
+router.get('/', async (ctx, next) => {
   try {
     // let result = await User.getUser()
     // ctx.body = result
