@@ -1,9 +1,6 @@
-export default async function (ctx, next) {
-  const start = new Date()
-
-  await next()
-
-  const ms = new Date() - start
-
-  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
+async function Logger (ctx, next) {
+  const startDate = new Date()
+  next()
+  console.log(`method: ${ctx.method} code: ${ctx.status} time:${new Date() - startDate}ms`)
 }
+export default Logger

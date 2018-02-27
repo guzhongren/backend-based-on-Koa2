@@ -1,17 +1,20 @@
 import Router from 'koa-router'
-import User from '../model/user'
+// import User from '../model/user'
 const router = Router()
 
 router.get('/', async(ctx, next) => {
   try {
-    let result = await User.getUser()
-    ctx.body = result
+    // let result = await User.getUser()
+    // ctx.body = result
     // 测试
-    // ctx.body = {
-    //   'user': 'a'
-    // }
+    ctx.status = 200
+    ctx.body = {
+      'user': 'a'
+    }
   } catch (err) {
     console.log('catch', err)
+    ctx.status = 404
+    ctx.body = '未找到到啊。。'
   }
 }).post('/', (ctx, next) => {
   ctx.body = {

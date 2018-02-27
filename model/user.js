@@ -1,11 +1,11 @@
 'use strict'
-var config = require('../config/apiConfig')
-var pg = require('pg')
+import config from '../config/apiConfig'
+import pg from 'pg'
 
 /**
  * 获取所有用户
  */
-exports.getUser = () => {
+const getUser = () => {
   return new Promise((resolve, reject) => {
     let pool = pg.Pool(config.dataBase)
     pool.on('error', (err) => {
@@ -28,3 +28,5 @@ exports.getUser = () => {
     })
   })
 }
+
+export {getUser}
