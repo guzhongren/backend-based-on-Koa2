@@ -1,5 +1,6 @@
 'use strict'
-var router = require('koa-router')()
+import Router from 'koa-router'
+const router = Router()
 router.get('/', async(ctx, next) => {
   console.log('coming')
   ctx.body = {
@@ -11,4 +12,4 @@ router.get('/', async(ctx, next) => {
     index: 'index'
   }
 })
-module.exports = router
+export default router
