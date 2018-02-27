@@ -1,6 +1,6 @@
 let config = {
   api: {
-    apiPrefix: '/api',
+    apiPrefix: '/api/v1',
     apiPort: 3000
   },
   dataBase: {
@@ -14,4 +14,4 @@ let config = {
     idleTimeoutMillis: 3000 // 连接最大空闲时间 3s
   }
 }
-module.exports = config
+export default config
