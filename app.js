@@ -11,14 +11,15 @@ import serve from 'koa-static'
 import Router from 'koa-router'
 import path from 'path'
 import Koa from 'koa'
-import ErrorHandle from './middleWares/errorHandle'
+// import ErrorHandle from './middleWares/errorHandle'
 
 const router = Router({
   prefix: config.api.apiPrefix
 })
 const app = new Koa()
 
-app.use(ErrorHandle)
+app
+// .use(ErrorHandle)
   .use(logger())
   .use(bodyParser())
   .use(helmet())
