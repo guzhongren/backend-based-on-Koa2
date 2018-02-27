@@ -11,7 +11,8 @@ let config = {
     port: 5432,
     // 扩展属性
     max: 20, // 连接池最大连接数
-    idleTimeoutMillis: 3000 // 连接最大空闲时间 3s
+    idleTimeoutMillis: 3000, // 连接最大空闲时间 3s
+    connectionTimeoutMillis: 2000
   }
 }
 export default config
