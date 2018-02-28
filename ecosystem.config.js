@@ -8,7 +8,7 @@ module.exports = {
     // First application
     {
       name: 'koatest',
-      script: 'app.js',
+      script: 'index.js',
       env: {
         COMMON_VARIABLE: 'true'
       },

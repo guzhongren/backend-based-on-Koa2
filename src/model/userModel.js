@@ -1,7 +1,7 @@
 'use strict'
 import DataBasePool from './dataPool'
 class User {
-  constructor() {
+  constructor () {
     this.name = 'aa'
   }
   /**

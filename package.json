@@ -8,7 +8,8 @@
     "cover": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
     "standard": "./node_modules/.bin/standard --fix",
     "deploySetup": "./node_modules/.bin/pm2 deploy ecosystem.config.js production setup",
-    "deploy": "./node_modules/.bin/pm2 deploy ecosystem.config.js production"
+    "deploy": "./node_modules/.bin/pm2 deploy ecosystem.config.js production",
+    "build": "./node_modules/.bin/webpack --config webpack.config.js"
   },
   "dependencies": {
     "bcrypt": "^1.0.3",
