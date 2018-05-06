@@ -1,5 +1,5 @@
 import Router from 'koa-router'
-import User from '../model/user'
+import User from '../model/userModel'
 const router = Router()
 
 router.get('/', async (ctx, next) => {
@@ -12,9 +12,8 @@ router.get('/', async (ctx, next) => {
     //   'user': 'a'
     // }
   }, (err) => {
-    // return console.log('cucuo', err)
-    ctx.status = 500
-    ctx.body = err
+    ctx.status = err.status
+    ctx.body = err.message
   })
 }).post('/', (ctx, next) => {
   ctx.body = {
