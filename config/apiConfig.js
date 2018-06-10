@@ -6,7 +6,7 @@ let config = {
   dataBase: {
     host: '127.0.0.1',
     user: 'postgres',
-    database: 'geocon',
+    database: 'postgres',
     password: '000000',
     port: 5432,
     // 扩展属性
